@@ -2,7 +2,7 @@
 
 **Real-time 33-point body skeleton tracker — runs entirely in your browser. No server. No data collection. Just you and your stick figure.**
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-blue?style=flat-square)](https://github.com/VJPatz.github.io/bodysketch/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-blue?style=flat-square)](https://vjpatz.github.io/bodysketch/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)](./LICENSE)
 [![YouTube](https://img.shields.io/badge/YouTube-Watch%20the%20Video-red?style=flat-square&logo=youtube)](https://youtube.com/YOUR_VIDEO_LINK)
 
