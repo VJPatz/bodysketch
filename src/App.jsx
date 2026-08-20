@@ -66,7 +66,7 @@ export default function App() {
       renderPoses(ctx, smoothed, w, h);
     } else {
       tracker.update([]);
-      ctx.fillStyle = '#ffffff';
+      ctx.fillStyle = '#000000';
       ctx.fillRect(0, 0, w, h);
     }
 
@@ -136,7 +136,7 @@ export default function App() {
     const canvas = canvasRef.current;
     if (canvas) {
       const ctx = canvas.getContext('2d');
-      ctx.fillStyle = '#ffffff';
+      ctx.fillStyle = '#000000';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
     }
   }, [destroy]);
@@ -194,7 +194,7 @@ export default function App() {
             onClick={isRunning ? stopCamera : startCamera}
             disabled={status === 'loading'}
           >
-            {isRunning ? 'Stop' : status === 'loading' ? 'Loading…' : 'Start'}
+            {isRunning ? '✋ Done' : status === 'loading' ? 'Loading…' : '▶ Play'}
           </button>
         </div>
       </header>
@@ -205,13 +205,13 @@ export default function App() {
 
         {status === 'idle' && (
           <div className="viewport-empty">
-            <p>Press <strong>Start</strong> to begin tracking</p>
+            <p>Hit <strong>Play</strong> and light up 🕺</p>
           </div>
         )}
         {status === 'loading' && (
           <div className="viewport-empty">
             <div className="spinner" />
-            <p>Loading model & camera…</p>
+            <p>Warming up the lights…</p>
           </div>
         )}
         {status === 'error' && (

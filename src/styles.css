@@ -1,11 +1,13 @@
 :root {
-  --bg: #ffffff;
-  --surface: #fafafa;
-  --border: #e8e8ec;
-  --text: #1a1a2e;
-  --text-dim: #888899;
-  --accent: #1a1a2e;
-  --danger: #e63946;
+  --bg: #05050a;
+  --surface: #0d0d16;
+  --border: #22222e;
+  --text: #f2f2fa;
+  --text-dim: #7a7a90;
+  --accent: #00f0ff;
+  --accent-glow: rgba(0, 240, 255, 0.35);
+  --danger: #ff2ee6;
+  --danger-glow: rgba(255, 46, 230, 0.35);
   --radius: 8px;
   --header-h: 52px;
 }
@@ -67,9 +69,10 @@ body {
   align-items: center;
   gap: 6px;
   color: var(--text);
+  text-shadow: 0 0 12px var(--accent-glow);
 }
 
-.logo-icon { font-size: 18px; }
+.logo-icon { font-size: 18px; color: var(--accent); text-shadow: 0 0 8px var(--accent); }
 
 .badge {
   font-size: 10px;
@@ -125,7 +128,7 @@ body {
 .viewport {
   flex: 1;
   position: relative;
-  background: #ffffff;
+  background: #000000;
   overflow: hidden;
   min-height: 0;
 }
@@ -171,6 +174,7 @@ body {
   border-top-color: var(--accent);
   border-radius: 50%;
   animation: spin 0.7s linear infinite;
+  box-shadow: 0 0 10px var(--accent-glow);
 }
 
 @keyframes spin { to { transform: rotate(360deg); } }
@@ -178,7 +182,7 @@ body {
 /* ── Camera select ── */
 .select {
   appearance: none;
-  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='%23888899'%3E%3Cpath d='M0 0l5 6 5-6z'/%3E%3C/svg%3E") no-repeat right 10px center;
+  background: var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='%237a7a90'%3E%3Cpath d='M0 0l5 6 5-6z'/%3E%3C/svg%3E") no-repeat right 10px center;
   color: var(--text);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -210,16 +214,24 @@ body {
 }
 
 .btn:disabled { opacity: 0.4; cursor: not-allowed; }
-.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary {
+  background: var(--accent);
+  color: #05050a;
+  box-shadow: 0 0 16px var(--accent-glow);
+}
 .btn-primary:hover:not(:disabled) { opacity: 0.85; }
-.btn-stop { background: var(--danger); color: #fff; }
+.btn-stop {
+  background: var(--danger);
+  color: #05050a;
+  box-shadow: 0 0 16px var(--danger-glow);
+}
 .btn-stop:hover:not(:disabled) { opacity: 0.85; }
 
 .btn-sm {
   padding: 4px 14px;
   height: auto;
   font-size: 12px;
-  background: #fff;
+  background: var(--surface);
   color: var(--text);
   border: 1px solid var(--border);
   border-radius: var(--radius);

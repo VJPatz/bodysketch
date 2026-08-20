@@ -16,12 +16,12 @@ export const POSE_CONNECTIONS = [
   [24, 26], [26, 28], [28, 30], [28, 32], [30, 32],
 ];
 
-// Colors for white background
+// Neon colors for black background
 export const PERSON_COLORS = [
-  { joint: '#1a1a2e', bone: 'rgba(26, 26, 46, 0.6)' },
-  { joint: '#e63946', bone: 'rgba(230, 57, 70, 0.5)' },
-  { joint: '#2a9d8f', bone: 'rgba(42, 157, 143, 0.5)' },
-  { joint: '#e76f51', bone: 'rgba(231, 111, 81, 0.5)' },
+  { joint: '#00f0ff', bone: 'rgba(0, 240, 255, 0.85)', glow: '#00f0ff' },
+  { joint: '#ff2ee6', bone: 'rgba(255, 46, 230, 0.85)', glow: '#ff2ee6' },
+  { joint: '#39ff6a', bone: 'rgba(57, 255, 106, 0.85)', glow: '#39ff6a' },
+  { joint: '#ffe600', bone: 'rgba(255, 230, 0, 0.85)', glow: '#ffe600' },
 ];
 
 export const RENDER_CONFIG = {
@@ -29,6 +29,7 @@ export const RENDER_CONFIG = {
   boneWidth: 3,
   minVisibility: 0.45,
   headJointRadius: 3,
+  glowBlur: 14,
 };
 
 export const TRACKER_CONFIG = {
